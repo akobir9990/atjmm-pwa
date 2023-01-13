@@ -44,10 +44,10 @@ function Quiz() {
           </div>
           <div>
             <Button variant="outlined" onClick={previousQuestion}>
-              prev
+              prev question
             </Button>
             <Button variant="outlined" onClick={nextQuestion}>
-              next
+              next question
             </Button>
             <Button onClick={setGetResult} disabled={currentQuestion!=questions.length-1} variant="contained">
               show result
