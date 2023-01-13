@@ -49,7 +49,7 @@ function Quiz() {
             <Button variant="outlined" onClick={nextQuestion}>
               next
             </Button>
-            <Button disabled={currentQuestion!=questions.length-1} variant="contained">
+            <Button onClick={setGetResult} disabled={currentQuestion!=questions.length-1} variant="contained">
               show result
             </Button>
           </div>
