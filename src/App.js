@@ -1,14 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Appbar from "./components/appbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        Assalomu aleykum nma ggaaap
-      </header>
+    <div>
+      <Appbar />
     </div>
   );
 }
