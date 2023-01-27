@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Container, ImageListItem } from "@mui/material";
 import abdullayev from "../../assets/images/abdullayev.jpg";
 import "./style.css";
-
 function index() {
   return (
     <Container>
@@ -31,10 +30,10 @@ function index() {
             width: "100%",
             padding: "20px 10px 200px 10px",
             display: "flex",
-            justifyContent: "center",
           }}
+          className="author"
         >
-          <ImageListItem
+          <Box
             sx={{
               width: "200px",
               height: "200px",
@@ -47,7 +46,7 @@ function index() {
               src={abdullayev}
               alt="Abdullayev Zafar Sayfutdinovich"
             />
-          </ImageListItem>
+          </Box>
           <div
             sx={{
               paddingLeft: "20px",
