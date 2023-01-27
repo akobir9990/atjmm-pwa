@@ -12,7 +12,7 @@ import Tutorial from "../pages/tutorial";
 import TestAPage from "../pages/tests";
 import Error from "../pages/errorPage";
 import One from "../pages/presentation/pages/one";
-import Two from "../pages/presentation/pages/two";
+import Two from "../pages/presentation/pages/two/index";
 import Three from "../pages/presentation/pages/three";
 import Four from "../pages/presentation/pages/four";
 import Five from "../pages/presentation/pages/five";

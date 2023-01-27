@@ -69,8 +69,6 @@ function ResponsiveAppBar() {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="/"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -114,9 +112,14 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <NavLink to={page.path} key={page.id}>
+                  <NavLink sx={{}} to={page.path} key={page.id}>
                     <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography sx={{ textAlign: "center" }}>
+                      <Typography
+                        sx={{
+                          color: "#00337C",
+                          fontWeight: "semibold",
+                        }}
+                      >
                         {page.name}
                       </Typography>
                     </MenuItem>
@@ -181,7 +184,15 @@ function ResponsiveAppBar() {
                 {settings.map((setting) => (
                   <NavLink key={setting.id} to={setting.path}>
                     <MenuItem onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">{setting.name}</Typography>
+                      <Typography
+                        sx={{
+                          color: "#00337C",
+                          fontWeight: "semibold",
+                        }}
+                        textAlign="center"
+                      >
+                        {setting.name}
+                      </Typography>
                     </MenuItem>
                   </NavLink>
                 ))}

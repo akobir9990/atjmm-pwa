@@ -24,6 +24,7 @@ import twentyOne from "./img/21.svg";
 import twentyTwo from "./img/22.svg";
 import twentyThree from "./img/23.svg";
 import { Container } from "@mui/material";
+import { TelegramIcon, TelegramShareButton } from "react-share";
 
 function index() {
   const items = [
@@ -53,8 +54,40 @@ function index() {
   ];
   return (
     <Container>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          margin: "20px 0px",
+        }}
+      >
+        {goBack ? (
+          <NavLink to={path}>
+            <Button
+              sx={{ bgcolor: "red", color: "white" }}
+              onMouseEnter={() => setGoBack(!goBack)}
+              variant="outlined"
+            >
+              X
+            </Button>
+          </NavLink>
+        ) : (
+          <NavLink to="/presentation">
+            <Button onMouseLeave={() => setGoBack(!goBack)} variant="contained">
+              ortga
+            </Button>
+          </NavLink>
+        )}
+        <TelegramShareButton sx={{ borderraius: "10px" }} url={path}>
+          <TelegramIcon
+            sx={{ borderraius: "10px" }}
+            className="rounded w-8"
+          ></TelegramIcon>
+        </TelegramShareButton>
+      </Box>
       {items.map((item) => (
-        <img className="w-[100%]"  key={item.id} src={item.name} alt="???" />
+        <img className="w-[100%]" key={item.id} src={item.name} alt="???" />
       ))}
     </Container>
   );

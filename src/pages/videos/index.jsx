@@ -15,6 +15,7 @@ import seven from "./img/7.svg";
 import eight from "./img/8.svg";
 import nine from "./img/9.svg";
 import ten from "./img/10.svg";
+import { NavLink } from "react-router-dom";
 
 function srcset(image, width, height, rows = 1, cols = 1) {
   return {
@@ -45,25 +46,29 @@ export default function CustomImageList() {
               loading="lazy"
               className="hover:scale-[1.05] transition ease-in-out delay-150"
             />
-            <ImageListItemBar
-              sx={{
-                color: "30px",
-                background:
-                  "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-                  "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)", 
-              }}
-              title={item.title}
-              position="top"
-              actionIcon={
-                <IconButton
-                  sx={{ color: "white" }}
-                  aria-label={`star ${item.title}`}
-                >
-                  <OndemandVideoIcon />
-                </IconButton>
-              }
-              actionPosition="left"
-            />
+            <a href={item.url}>
+              <ImageListItemBar
+                sx={{
+                  background:
+                    "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
+                    "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                title={item.title}
+                position="top"
+                actionIcon={
+                  <IconButton
+                    sx={{ color: "red", width: "100px" }}
+                    aria-label={`star ${item.title}`}
+                  >
+                    <OndemandVideoIcon sx={{ color: "red", width: "200px" }} />
+                  </IconButton>
+                }
+                actionPosition="left"
+              />
+            </a>
           </ImageListItem>
         );
       })}
